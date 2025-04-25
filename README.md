@@ -7,11 +7,11 @@ En este directorio encontrarán todo el material desarollado para el apoyo en cl
 
 ## Diapositivas
   
-  • [Presentación del Curso] (Diapositivas/0. Presentación del Curso.pptx)
+  • [Presentación del Curso](Diapositivas/Presentacion_del_Curso.pptx)
 
-  • [Definición de Indicadores] (Diapositivas/1-Indicadores_V251.pptx)
+  • [Definición de Indicadores](Diapositivas/1_Indicadores_V251.pptx)
 
-  • [OKRs y Funeles] (Diapositivas/2-Visualizacion de Indicadores.pptx)
+  • [OKRs y Funeles](Diapositivas/2_OKRs_Funeles.pptx)
 
   ## Bibliografía
 
