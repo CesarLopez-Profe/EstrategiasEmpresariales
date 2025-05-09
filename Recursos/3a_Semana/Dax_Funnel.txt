@@ -1,0 +1,16 @@
+VAR Productos = VALUES('Sheet1'[Producto_Comprado])
+VAR TablaBase = 
+    ADDCOLUMNS (
+        Productos,
+        "TotalVisitas", CALCULATE(SUM('Sheet1'[Visitas])),
+        "TotalLeads", CALCULATE(SUM('Sheet1'[Leads])),
+        "TotalCargaCarro", CALCULATE(SUM('Sheet1'[Carga_Carro])),
+        "TotalVentaEfectiva", CALCULATE(SUM('Sheet1'[Venta_Efectiva]))
+    )
+RETURN
+UNION (
+    SELECTCOLUMNS (TablaBase, "Producto", [Producto_Comprado], "nivel", "Visitas", "Total", [TotalVisitas], "porcentajeVisitas", 1, "porcentajePerdida", 0),
+    SELECTCOLUMNS (TablaBase, "Producto", [Producto_Comprado], "nivel", "Leads", "Total", [TotalLeads], "porcentajeVisitas", DIVIDE([TotalLeads], [TotalVisitas]), "porcentajePerdida", 1 - DIVIDE([TotalLeads], [TotalVisitas])),
+    SELECTCOLUMNS (TablaBase, "Producto", [Producto_Comprado], "nivel", "Carga_Carro", "Total", [TotalCargaCarro], "porcentajeVisitas", DIVIDE([TotalCargaCarro], [TotalVisitas]), "porcentajePerdida", 1 - DIVIDE([TotalCargaCarro], [TotalVisitas])),
+    SELECTCOLUMNS (TablaBase, "Producto", [Producto_Comprado], "nivel", "Venta_Efectiva", "Total", [TotalVentaEfectiva], "porcentajeVisitas", DIVIDE([TotalVentaEfectiva], [TotalVisitas]), "porcentajePerdida", 1 - DIVIDE([TotalVentaEfectiva], [TotalVisitas]))
+)
