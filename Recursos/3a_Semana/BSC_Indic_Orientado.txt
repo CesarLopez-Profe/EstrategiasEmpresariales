@@ -1,0 +1,27 @@
+KPI_Indice_Orientado = 
+VAR KPI_Sigla = 'Datos_KPI'[KPI Sigla]
+VAR KPI_Meta = 'Datos_KPI'[Meta]
+VAR KPI_Valor = 'Datos_KPI'[Real]
+VAR KPI_Orientacion = RELATED('Definicion_KPI'[Orientacion])
+
+VAR KPI_Index_Mas_Mejor = 
+SWITCH(
+    TRUE(),
+    KPI_Valor >= KPI_Meta, 1, 3 
+)
+
+VAR KPI_Index_Menos_Mejor = 
+SWITCH(
+    TRUE(),
+    KPI_Valor <= KPI_Meta, 1, 3
+)
+
+VAR Resultado = 
+SWITCH(
+    TRUE(),
+    KPI_Orientacion = "Mas Es Mejor", KPI_Index_Mas_Mejor,
+    KPI_Orientacion = "Menos Es Mejor", KPI_Index_Menos_Mejor
+)
+
+RETURN
+Resultado
