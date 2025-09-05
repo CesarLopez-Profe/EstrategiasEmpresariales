@@ -1,3 +1,0 @@
-Semaforo_ToR = 
-if(SELECTEDVALUE(Mediciones_APPs[Tiempo Respuesta]) <= SELECTEDVALUE(Metas_ToR[Meta_ToR]), "https://i.gifer.com/30qd.gif", if(AND(SELECTEDVALUE(Mediciones_APPs[Tiempo Respuesta])>SELECTEDVALUE(Metas_ToR[Meta_ToR]),SELECTEDVALUE(Mediciones_APPs[Tiempo Respuesta])<=SELECTEDVALUE(Metas_ToR[Nivel_Aceptable])), "https://i.gifer.com/Ddjq.gif
-","https://i.gifer.com/ZSj7.gif"))

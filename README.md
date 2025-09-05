@@ -1,18 +1,17 @@
-# Indicadores de Gestión 
+# Estrategias Empresariales 
 
-Material de estudio para el curso de Inicadores de Gestión.
+Material de estudio para el curso de Estrategias Empresariales.
 
 En este directorio encontrarán todo el material desarollado para el apoyo en clase. 
 
 
 ## Diapositivas
   
-  • [Presentación del Curso](Diapositivas/Presentacion_del_Curso.pptx)
+  • [Presentación del Curso](1S_Estrategia_Corporativa/0.Presentación_del_Curso.pptx)
 
-  • [Definición de Indicadores](Diapositivas/1_Indicadores_V251.pptx)
+  • [Estrategias Clásicas & Emergentes](D1S_Estrategia_Corporativa/1.Estrategias_Clasicas_Emergentes.pptx)
 
-  • [OKRs y Funeles](Diapositivas/2_OKRs_Funeles.pptx)
-
+ 
   ## Bibliografía
 
   • 75 Kew Performance Indicator. Bernard Marr
