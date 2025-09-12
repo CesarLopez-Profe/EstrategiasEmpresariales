@@ -11,6 +11,8 @@ En este directorio encontrarán todo el material desarollado para el apoyo en cl
 
   • [Estrategias Clásicas & Emergentes](1S_Estrategia_Corporativa/1.Estrategias_Clasicas_Emergentes.pptx)
 
+  • [Estrategias de Transformación Digital, de Datos](2S_Estrategias_Enfocada_Dx_DS/Estrategias_Enfocadas.pptx)
+
  
   ## Bibliografía
 
