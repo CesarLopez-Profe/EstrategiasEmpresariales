@@ -1,0 +1,39 @@
+En Datos KPI Se crea una columna nueva para el índice básico que compara real contra meta. 
+
+KPI_indice_basico = 
+SWITCH(
+    TRUE(),
+    Datos_KPI[Real] >= Datos_KPI[Meta], 3,
+    Datos_KPI[Real] < Datos_KPI[Meta], 1
+)
+
+
+
+En Datos KPI Se crea una columna nueva para el índice del KPI alineada con la orientación del indicador
+
+KPI_Indice_Orientado = 
+VAR KPI_Sigla = 'Datos_KPI'[KPI Sigla]
+VAR KPI_Meta = 'Datos_KPI'[Meta]
+VAR KPI_Valor = 'Datos_KPI'[Real]
+VAR KPI_Orientacion = RELATED('Definicion_KPI'[Orientacion])
+
+VAR KPI_Index_Mas_Mejor = 
+SWITCH(
+    TRUE(),
+    KPI_Valor >= KPI_Meta, 1, 3 
+)
+
+VAR KPI_Index_Menos_Mejor = 
+SWITCH(
+    TRUE(),
+    KPI_Valor <= KPI_Meta, 1, 3
+)
+
+VAR Resultado = 
+SWITCH(
+    TRUE(),
+    KPI_Orientacion = "Mas Es Mejor", KPI_Index_Mas_Mejor,
+    KPI_Orientacion = "Menos Es Mejor", KPI_Index_Menos_Mejor
+)
+
+RETURN Resultado
